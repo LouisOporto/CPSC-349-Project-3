@@ -1,11 +1,20 @@
 ---
 layout: base
-title: Home
+title: Photography
+pagination:
+  data: selectedgallery.media
+  size: 10
 ---
 
 <header>
   <h1>{{ title }}</h1>
 </header>
+
+<ul>
+  {% for photo in pagination.items %}
+  <li><img src="{{ photo.src.tiny }}"></li>
+  {% endfor %}
+</ul>
 
 <footer>
   <hr />
