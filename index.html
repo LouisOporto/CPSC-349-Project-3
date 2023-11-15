@@ -10,11 +10,18 @@ pagination:
   <h1>{{ title }}</h1>
 </header>
 
-<ul>
+<main>
+<article>
   {% for photo in pagination.items %}
-  <li><img src="{{ photo.src.tiny }}"></li>
+  <figure>
+    <img src="{{ photo.src.tiny }}">
+  </figure>
+  <figcaption>
+    <i>{{ photo.alt }}</i>
+  </figcaption>
   {% endfor %}
-</ul>
+</article>
+</main>
 
 <footer>
   <hr />
