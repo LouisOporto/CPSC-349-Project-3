@@ -1,35 +1,37 @@
 ---
-layout: base
-title: Photography
+site: CPSC 349 - Project 3
+title: Photo Gallery
 pagination:
   data: photos.u5o7nq1.media
-  size: 10
+  size: 80
 ---
+
+{% include "_head.html" %}
 
 <header>
   <h1>{{ title }}</h1>
 </header>
 
+<nav>
+    <ul class="nav">
+        <li class="nav-item">1</li>
+        <li class="nav-item">2</li>
+    </ul>
+</nav>
+
 <main>
 <article>
   {% for photo in pagination.items %}
   <figure>
-    <img src="{{ photo.src.tiny }}">
+    <!-- Need to link each photo to a enlarged html link-->
+    <a href=""><img src="{{ photo.src.tiny }}"></a>
   </figure>
   <figcaption>
+    <!-- Fig caption is only temporary-->
     <i>{{ photo.alt }}</i>
   </figcaption>
   {% endfor %}
 </article>
 </main>
 
-<footer>
-  <hr />
-  <p>
-    <small>
-      <a href="https://www.pexels.com" target="_blank"
-        >Photos provided by Pexels</a
-      >
-    </small>
-  </p>
-</footer>
+{% include "_foot.html" %}
