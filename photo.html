@@ -1,0 +1,35 @@
+---
+site: CPSC 349 - Project 3
+title: Photo Gallery
+pagination:
+    data: photos.u5o7nq1.media
+    size: 1
+    alias: photo
+permalink: "photos/page-{{ photo.id | slugify }}/"
+---
+
+{% include "_head.html" %}
+<body style="background-color: {{ photo.avg_color }}">
+    <header>
+        <h1>{{ title }}</h1>
+    </header>
+
+    <nav>
+        <ul class="nav">
+            <li class="nav-item"><a href="../../index.html">Return to Gallery</a></li>
+            <li class="nav-item">Unused nav button</li>
+        </ul>
+    </nav>
+
+    <main>
+        <figure>
+            <img src="{{ photo.src.original }}">
+        <figcaption>
+            <i>{{photo.alt}}</i>
+            <p>By <a href="https://www.pexels.com/@vladbagacian">{{ photo.photographer }}</a></p>
+        </figcaption>
+        </figure>
+    </main>
+
+<!-- /body is in _foot.html -->
+{% include "_foot.html" %}
