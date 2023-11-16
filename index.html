@@ -1,11 +1,12 @@
 ---
 site: CPSC 349 - Project 3
-layout: base
 title: Photo Gallery
 pagination:
   data: photos.u5o7nq1.media
   size: 80
 ---
+
+{% include "_head.html" %}
 
 <header>
   <h1>{{ title }}</h1>
@@ -28,11 +29,4 @@ pagination:
   </article>
 </main>
 
-<footer>
-  <hr />
-  <p>
-    <small>
-      <a href="https://www.pexels.com" target="_blank">Photos provided by Pexels</a>
-    </small>
-  </p>
-</footer>
+{% include "_foot.html" %}

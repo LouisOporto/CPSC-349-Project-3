@@ -9,27 +9,26 @@ permalink: "photos/page-{{ photo.id | slugify }}/"
 ---
 
 {% include "_head.html" %}
-<body style="background-color: {{ photo.avg_color }}">
-    <header>
-        <h1>{{ title }}</h1>
-    </header>
 
-    <nav>
-        <ul class="nav">
-            <li class="nav-item"><a href="../../index.html">Return to Gallery</a></li>
-            <li class="nav-item">Unused nav button</li>
-        </ul>
-    </nav>
+<header>
+    <h1>{{ title }}</h1>
+</header>
 
-    <main>
-        <figure>
-            <img src="{{ photo.src.original }}">
-        <figcaption>
-            <i>{{photo.alt}}</i>
-            <p>By <a href="https://www.pexels.com/@vladbagacian">{{ photo.photographer }}</a></p>
-        </figcaption>
-        </figure>
-    </main>
+<nav>
+    <ul class="nav">
+        <li class="nav-item"><a href="../../index.html">Return to Gallery</a></li>
+        <li class="nav-item">Unused nav button</li>
+    </ul>
+</nav>
 
-<!-- /body is in _foot.html -->
+<main>
+    <figure>
+        <img src="{{ photo.src.original }}">
+    <figcaption>
+        <i>{{photo.alt}}</i>
+        <p>By <a href="https://www.pexels.com/@vladbagacian">{{ photo.photographer }}</a></p>
+    </figcaption>
+    </figure>
+</main>
+
 {% include "_foot.html" %}
