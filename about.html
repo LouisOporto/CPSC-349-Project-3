@@ -19,14 +19,5 @@ pagination:
 </header>
 
 <main>
-  <article>
-    <!-- This will hold the entire gallery with links to each image's page-->
-    {% for photo in pagination.items %}
-      <figure>
-        <a href="/photos/page-{{photo.id}}/"><img src="{{ photo.src.tiny }}"></a>
-      </figure>
-    {% endfor %}
-  </article>
+    <h1>About us</h1>
 </main>
-
-{% include "_foot.html" %}
