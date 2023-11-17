@@ -23,7 +23,7 @@ pagination:
     <!-- This will hold the entire gallery with links to each image's page-->
     <div class="images-container">
     {% for photo in pagination.items %}
-      <figure>
+      <figure class="image">
         <a href="/photos/page-{{photo.id}}/"><img src="{{ photo.src.tiny }}"></a>
       </figure>
     {% endfor %}

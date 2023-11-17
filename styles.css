@@ -12,3 +12,8 @@
     align-items: center;
     grid-template-rows: auto;
 }
+
+.image {
+    margin-left: 2px;
+    margin-right: 2px;
+}
