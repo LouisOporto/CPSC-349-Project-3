@@ -1,0 +1,25 @@
+/*.images-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}*/
+
+.images-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: auto;
+}
+
+.image {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.about {
+    Display: grid;
+    Grid-template-columns: 1fr 1fr 1fr 1fr;
+    Grid-template-rows: 1fr;
+}
